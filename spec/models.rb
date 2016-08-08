@@ -37,7 +37,7 @@ end
 
 module Inventory
   class ProductFeature < ActiveRecord::Base
-    self.table_name = 'inventory_product_features'
+    self.table_name = 'inv_prod_feat'
     actable
     validates_presence_of :name, :price
 
@@ -75,7 +75,7 @@ initialize_database do
     t.string :color
   end
 
-  create_table :inventory_product_features do |t|
+  create_table :inv_prod_feat do |t|
     t.string :name
     t.float :price
     t.actable
